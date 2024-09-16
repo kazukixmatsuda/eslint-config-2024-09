@@ -139,11 +139,18 @@ export default tseslint.config(
     plugins: { spellcheck: spellcheckPlugin },
     rules: {
       "spellcheck/spell-checker": [
-        "off",
+        "error",
         {
           minLength: 5, // 5 文字以上の単語をチェック
           // チェックをスキップする単語の配列
-          skipWords: ["noreferrer", "compat", "vitest", "tseslint"],
+          skipWords: [
+            "noreferrer",
+            "compat",
+            "vitest",
+            "tseslint",
+            "globals",
+            "fixup",
+          ],
         },
       ],
     },
